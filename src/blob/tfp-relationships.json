@@ -1,0 +1,13 @@
+{
+  "/ns:TrustFrameworkPolicy/ns:UserJourneys/ns:UserJourney/@Id": [
+    "/ns:TrustFrameworkPolicy/ns:RelyingParty/ns:DefaultUserJourney/@ReferenceId"
+  ],
+  "/ns:TrustFrameworkPolicy/ns:ClaimsProviders/ns:ClaimsProvider/ns:TechnicalProfiles/ns:TechnicalProfile/@Id": [
+    "/ns:TrustFrameworkPolicy/ns:UserJourneys/ns:UserJourney/ns:OrchestrationSteps/ns:OrchestrationStep/ns:ClaimsExchanges/ns:ClaimsExchange/@TechnicalProfileReferenceId",
+    "/ns:TrustFrameworkPolicy/ns:ClaimsProviders/ns:ClaimsProvider/ns:TechnicalProfiles/ns:TechnicalProfile/ns:IncludeClaimsFromTechnicalProfile/@ReferenceId",
+    "/ns:TrustFrameworkPolicy/ns:ClaimsProviders/ns:ClaimsProvider/ns:TechnicalProfiles/ns:TechnicalProfile/ns:IncludeTechnicalProfile/@ReferenceId",
+    "/ns:TrustFrameworkPolicy/ns:ClaimsProviders/ns:ClaimsProvider/ns:TechnicalProfiles/ns:TechnicalProfile/ns:UseTechnicalProfileForSessionManagement/@ReferenceId",
+    "/ns:TrustFrameworkPolicy/ns:ClaimsProviders/ns:ClaimsProvider/ns:TechnicalProfiles/ns:TechnicalProfile/ns:ValidationTechnicalProfiles/ns:ValidationTechnicalProfile/@ReferenceId",
+    "/ns:TrustFrameworkPolicy/ns:UserJourneys/ns:UserJourney/ns:OrchestrationSteps/ns:OrchestrationStep/@CpimIssuerTechnicalProfileReferenceId"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "b2c-utilities",
-  "displayName": "b2c-utilities",
+  "displayName": "B2C Utilities",
   "description": "Utilities for B2C policy development",
   "version": "0.0.1",
   "engines": {
@@ -10,16 +10,65 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:b2c-utilities.helloWorld"
+    "onCommand:b2cutilities.removeUnusedCode",
+    "onCommand:b2cutilities.exportTranslations",
+    "onCommand:b2cutilities.importTranslations"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "b2c-utilities.helloWorld",
-        "title": "Hello World"
+        "command": "b2cutilities.removeUnusedCode",
+        "title": "B2C Remove Unused Code"
+      },
+      {
+        "command": "b2cutilities.exportTranslations",
+        "title": "B2C Export Translations"
+      },
+      {
+        "command": "b2cutilities.importTranslations",
+        "title": "B2C Import Translations"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "B2C Utilities",
+      "properties": {
+        "paths.includedXmlPaths": {
+          "type": "array",
+          "default": [
+            "**/*.xml"
+          ],
+          "description": "An array of glob expressions that define which files should be included as policies. These should be relative to the root of your VSCode workspace.",
+          "scope": "window"
+        },
+        "paths.excludedXmlPaths": {
+          "type": "array",
+          "default": [
+            "Environments/**"
+          ],
+          "description": "An array of glob expressions that define which files should be excluded as policies. These should be relative to the root of your VSCode workspace.",
+          "scope": "window"
+        },
+        "translation.policyMapUri": {
+          "type": "string",
+          "default": "B2C Policy Map.csv",
+          "description": "Export/import the policy map from this location (path relative to root of your vscode workspace). This file is used to map a localized string to a translation.",
+          "scope": "window"
+        },
+        "translation.translationsUri": {
+          "type": "string",
+          "default": "B2C Translations.csv",
+          "description": "Export/import the translation key from this location (path relative to root of your vscode workspace)",
+          "scope": "window"
+        },
+        "translation.indexLanguage": {
+          "type": "string",
+          "default": "en",
+          "description": "The language to use as an index for mapping a localized string to a translation",
+          "scope": "window"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -38,12 +87,13 @@
     "@typescript-eslint/parser": "^5.27.0",
     "@vscode/test-electron": "^2.1.3",
     "eslint": "^8.16.0",
-    "glob": "^8.0.3",
     "mocha": "^10.0.0",
     "typescript": "^4.7.2"
   },
   "dependencies": {
     "@types/xmldom": "^0.1.31",
+    "csv": "^6.1.3",
+    "minimatch": "^5.1.0",
     "xmldom": "^0.6.0",
     "xpath": "^0.0.32"
   }

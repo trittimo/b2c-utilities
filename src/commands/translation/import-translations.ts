@@ -4,7 +4,7 @@ import * as xmldom from "xmldom";
 import * as path from "path";
 import { PolicyController } from "../../utils/policy/policy-controller";
 
-export class importTranslationsCommand {
+export class ImportTranslationsCommand {
     static async run(context: vscode.ExtensionContext) {
         if (vscode.workspace.workspaceFolders === undefined || vscode.workspace.workspaceFolders.length == 0) {
             vscode.window.showErrorMessage("You don't have a workspace open. Please open a workspace before attempting to import a translation key.");

@@ -1,10 +1,6 @@
 import * as path from 'path';
 
-<<<<<<< HEAD
-import { runTests } from 'vscode-test';
-=======
 import { runTests } from '@vscode/test-electron';
->>>>>>> origin/revamp
 
 async function main() {
 	try {

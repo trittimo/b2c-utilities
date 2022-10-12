@@ -10,6 +10,7 @@
     "Other"
   ],
   "activationEvents": [
+    "*",
     "onCommand:b2cutilities.removeUnusedCode",
     "onCommand:b2cutilities.exportTranslations",
     "onCommand:b2cutilities.importTranslations"
@@ -28,6 +29,10 @@
       {
         "command": "b2cutilities.importTranslations",
         "title": "B2C Import Translations"
+      },
+      {
+        "command": "b2cutilities.renumberTechProfiles",
+        "title": "B2C Renumber Tech Profiles"
       }
     ],
     "configuration": {

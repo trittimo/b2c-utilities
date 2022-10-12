@@ -1,6 +1,6 @@
-# b2cutilities README
+# b2c-utilities README
 
-This is the README for your extension "b2cutilities". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "b2c-utilities". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
